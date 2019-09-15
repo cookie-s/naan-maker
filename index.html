@@ -5,16 +5,17 @@
         <script>
             function makenaan() {
                 const seed = document.getElementById('seed').value;
-                document.getElementById('result').value = `${seed}やねん(${seed}なので)`;
+                const nora = document.getElementById('nora').checked;
+                document.getElementById('result').value = `${nora ? 'nora' : ''}${seed}やねん(${seed}なので)`;
             }
         </script>
     </head>
 
     <body>
-        <input type="text" id="seed" onkeyup="makenaan()" value="ナン" />
-        <input type="text" readonly disabled id="result" />
-        <script>
-            makenaan();
-        </script>
+        <p> <input type="text" id="seed" onkeyup="makenaan()" value="ナン" /> </p>
+        <p> <input type="checkbox" id="nora" onchange="makenaan()" /> nora </p>
+        <p> <input type="text" readonly disabled id="result" /> </p>
+
+        <script> makenaan(); </script>
     </body>
 </html>
