@@ -16,6 +16,12 @@
         <p> <input type="checkbox" id="nora" onchange="makenaan()" /> nora </p>
         <p> <input type="text" readonly disabled id="result" /> </p>
 
-        <script> makenaan(); </script>
+        <script>
+            const q = location.hash.substring(1);
+            if (q !== "") {
+                document.getElementById('seed').value = q;
+            }
+            makenaan();
+        </script>
     </body>
 </html>
