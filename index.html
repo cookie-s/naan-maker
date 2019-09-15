@@ -17,7 +17,7 @@
         <p> <input type="text" readonly disabled id="result" /> </p>
 
         <script>
-            const q = location.hash.substring(1);
+            const q = decodeURIComponent(location.hash.substring(1));
             if (q !== "") {
                 document.getElementById('seed').value = q;
             }
