@@ -7,6 +7,7 @@
             function makenaan() {
                 const seed = document.getElementById('seed').value;
                 const nora = document.getElementById('nora').checked;
+                location.hash = seed;
                 document.getElementById('result').value = `${nora ? 'nora' : ''}${seed}やねん(${seed}なので)`;
             }
         </script>
