@@ -1,10 +1,10 @@
 <!doctype html>
 <html>
     <head>
-        <title>naan-maker</title>
+        <title>naan-baker</title>
         <style> input[type="text"] {width: 100%;} </style>
         <script>
-            function makenaan() {
+            function bakenaan() {
                 const seed = document.getElementById('seed').value;
                 const nora = document.getElementById('nora').checked;
                 location.hash = seed;
@@ -23,7 +23,7 @@
             if (q !== "") {
                 document.getElementById('seed').value = q;
             }
-            makenaan();
+            bakenaan();
         </script>
     </body>
 </html>
